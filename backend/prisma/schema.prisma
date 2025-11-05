@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  extensions = [vector]
+}
+
+model Document {
+  id        String   @id @default(uuid())
+  name      String
+  content   String  @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  chunks  DocumentChunk[]
+
+  @@map("documents")
+}
+
+model DocumentChunk {
+  id          String   @id @default(uuid())
+  documentId  String  
+  content     String   @db.Text
+  embedding  Unsupported("vector(1536)")?
+  chunkIndex Int
+  metadata   Json?
+  createdAt   DateTime @default(now())
+
+  document    Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId])
+  @@map("document_chunks")
+}
+
+model ChatHistory {
+  id        String   @id @default(uuid())
+  query     String   @db.Text
+  response  String   @db.Text
+  mode      String  
+  source    String   
+  confidence Float?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@map("chat_history")
+}
