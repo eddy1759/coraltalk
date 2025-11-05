@@ -1,0 +1,105 @@
+CLOUDSTORE PRO - FREQUENTLY ASKED QUESTIONS
+
+===== PRODUCT INFORMATION =====
+
+Q: What is CloudStore Pro?
+A: CloudStore Pro is a cloud-based file storage and collaboration platform designed for businesses of all sizes. It offers secure file storage, real-time collaboration, and seamless sharing capabilities with enterprise-grade security.
+
+Q: What are the main features?
+A: CloudStore Pro includes:
+- Unlimited file storage
+- Real-time document collaboration
+- Advanced security with end-to-end encryption
+- Team workspaces and project folders
+- Version control and file history
+- Mobile apps for iOS and Android
+- Integration with popular business tools
+- 24/7 customer support
+
+Q: What file types are supported?
+A: CloudStore Pro supports all common file types including documents (PDF, Word, Excel, PowerPoint), images (JPEG, PNG, GIF), videos (MP4, AVI, MOV), and compressed files (ZIP, RAR). Files up to 10GB can be uploaded.
+
+===== PRICING & PLANS =====
+
+Q: What pricing plans are available?
+A: We offer three plans:
+- Starter Plan: $9.99/month for individuals (100GB storage)
+- Business Plan: $24.99/month per user (1TB storage per user)
+- Enterprise Plan: Custom pricing with unlimited storage
+
+All plans include a 14-day free trial with no credit card required.
+
+Q: Can I change my plan later?
+A: Yes, you can upgrade or downgrade your plan at any time. If you upgrade, you'll be charged the prorated difference immediately. If you downgrade, the change takes effect at the start of your next billing cycle.
+
+Q: Do you offer discounts for annual subscriptions?
+A: Yes! Annual subscriptions receive a 20% discount compared to monthly billing. For example, the Business Plan costs $19.99/month when billed annually instead of $24.99/month.
+
+===== RETURN & REFUND POLICY =====
+
+Q: What is your return policy?
+A: We offer a 30-day money-back guarantee for all new subscriptions. If you're not satisfied within the first 30 days, contact our support team for a full refund.
+
+Q: How do I request a refund?
+A: To request a refund, email support@cloudstore.com with your account details and reason for cancellation. Refunds are processed within 5-7 business days to your original payment method.
+
+Q: Can I get a refund after 30 days?
+A: After the 30-day period, refunds are not available. However, you can cancel your subscription at any time to prevent future charges. You'll retain access until the end of your current billing period.
+
+===== ACCOUNT & SECURITY =====
+
+Q: How secure is my data?
+A: We take security seriously. All data is encrypted in transit (TLS 1.3) and at rest (AES-256 encryption). We're SOC 2 Type II certified and GDPR compliant. Our infrastructure is hosted on AWS with redundant backups.
+
+Q: Can I enable two-factor authentication?
+A: Yes, we strongly recommend enabling two-factor authentication (2FA) for added security. You can set this up in your account settings using an authenticator app or SMS.
+
+Q: What happens if I forget my password?
+A: Click "Forgot Password" on the login page and enter your email address. You'll receive a password reset link within minutes. For security reasons, reset links expire after 1 hour.
+
+===== STORAGE & FILES =====
+
+Q: What happens when I reach my storage limit?
+A: When you reach 90% of your storage limit, you'll receive an email notification. At 100%, you won't be able to upload new files until you either delete some files or upgrade your plan.
+
+Q: Are deleted files permanently removed?
+A: Deleted files are moved to the trash folder where they remain for 30 days. You can restore them during this period. After 30 days, files are permanently deleted and cannot be recovered.
+
+Q: Can I share files with people who don't have CloudStore Pro?
+A: Yes! You can create shareable links for any file or folder. You can set permissions (view-only or edit access) and optionally require a password or set an expiration date for the link.
+
+===== COLLABORATION =====
+
+Q: How many people can collaborate on a document simultaneously?
+A: Up to 50 users can edit a document at the same time with real-time syncing. Changes are saved automatically every few seconds.
+
+Q: Can I see who made changes to a file?
+A: Yes, our version history feature shows all changes made to a file, including who made them and when. You can view up to 90 days of version history and restore any previous version.
+
+===== SUPPORT =====
+
+Q: How can I contact customer support?
+A: Our support team is available 24/7 via:
+- Email: support@cloudstore.com
+- Live chat on our website
+- Phone: 1-800-CLOUD-PRO (for Business and Enterprise plans)
+
+Average response time is under 2 hours.
+
+Q: Do you offer training for teams?
+A: Yes! Business and Enterprise plans include free onboarding sessions and training webinars. We also have a comprehensive help center with video tutorials and documentation.
+
+===== TECHNICAL REQUIREMENTS =====
+
+Q: What are the system requirements?
+A: CloudStore Pro works on:
+- Web browsers: Chrome, Firefox, Safari, Edge (latest 2 versions)
+- Desktop apps: Windows 10+, macOS 10.14+
+- Mobile apps: iOS 13+, Android 8+
+- Internet connection: Minimum 5 Mbps recommended
+
+Q: Can I access files offline?
+A: Yes, with our desktop and mobile apps, you can mark files for offline access. Changes sync automatically when you're back online.
+
+Q: Is there an API for developers?
+A: Yes, we offer a RESTful API for Business and Enterprise plans. Full API documentation is available at docs.cloudstore.com/api.
