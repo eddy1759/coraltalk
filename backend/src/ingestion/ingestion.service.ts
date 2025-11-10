@@ -18,13 +18,11 @@ export class IngestionService {
     try {
       this.logger.log(`Starting ingestion from: ${filePath}`);
 
-      // Optionally clear existing data
       if (clearExisting) {
         this.logger.log('Clearing existing data...');
         await this.vectorStoreService.clearAll();
       }
 
-      // === START: Custom File Loader ===
       this.logger.log(`Loading file with custom loader: ${filePath}`);
 
       let fileContent: string;
@@ -35,21 +33,18 @@ export class IngestionService {
         throw new Error(`Failed to read file: ${readError.message}`);
       }
 
-      // Manually create the 'Document' structure that TextLoader provided.
       // The text splitter expects an array of objects with 'pageContent' and 'metadata'.
       const docs = [
         {
           pageContent: fileContent,
           metadata: {
-            source: filePath, // Add source metadata
+            source: filePath,
           },
         },
       ];
-      this.logger.log(`✓ Loaded 1 document(s) from file`);
-      // === END: Custom File Loader ===
+      this.logger.log(`Loaded 1 document(s) from file`);
 
       if (docs.length === 0 || !docs[0].pageContent) {
-        // This check is good to keep
         throw new Error('No documents loaded or file is empty');
       }
 
@@ -63,7 +58,6 @@ export class IngestionService {
       );
 
       // Split documents into chunks
-      // This part remains unchanged and will work perfectly with the new 'docs' array
       const textSplitter = new RecursiveCharacterTextSplitter({
         chunkSize: 500,
         chunkOverlap: 50,
@@ -89,7 +83,7 @@ export class IngestionService {
           source: documentName,
           chunkIndex: index,
           timestamp: new Date().toISOString(),
-          ...doc.metadata, // This will include the 'source' from our custom loader
+          ...doc.metadata,
         },
       }));
 
@@ -98,14 +92,14 @@ export class IngestionService {
 
       // Get and log statistics
       const stats = await this.vectorStoreService.getStats();
-      this.logger.log('✅ Ingestion completed successfully');
+      this.logger.log('Ingestion completed successfully');
       this.logger.log(`   Total documents: ${stats.totalDocuments}`);
       this.logger.log(`   Total chunks: ${stats.totalChunks}`);
       this.logger.log(
         `   Chunks with embeddings: ${stats.chunksWithEmbeddings}`,
       );
     } catch (error) {
-      this.logger.error('❌ Ingestion failed:', error);
+      this.logger.error('Ingestion failed:', error);
       throw error;
     }
   }
@@ -131,15 +125,15 @@ export class IngestionService {
       }
 
       for (const filePath of filePaths) {
-        await this.ingestFromFile(filePath, false); // Don't clear on subsequent files
+        await this.ingestFromFile(filePath, false);
       }
 
       const stats = await this.vectorStoreService.getStats();
-      this.logger.log('✅ Batch ingestion completed');
+      this.logger.log('Batch ingestion completed');
       this.logger.log(`   Total documents: ${stats.totalDocuments}`);
       this.logger.log(`   Total chunks: ${stats.totalChunks}`);
     } catch (error) {
-      this.logger.error('❌ Batch ingestion failed:', error);
+      this.logger.error('Batch ingestion failed:', error);
       throw error;
     }
   }
