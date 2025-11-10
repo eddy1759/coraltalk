@@ -27,7 +27,6 @@ export class PrismaService
   }
 
   async onModuleInit() {
-    // NestJS will call this method automatically when the module is initialized
     await this.$connect();
     this.logger.log('Prisma client connected.');
   }
