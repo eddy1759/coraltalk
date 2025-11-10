@@ -158,9 +158,9 @@ Frontend includes:
 
 CoralTalk can be deployed as a **two-tier system**:
 
-* **Frontend:** Static hosting (Vercel, Netlify, Cloudflare Pages)
-* **Backend:** Node service (Render, Railway, Fly.io, or Docker)
-* **Database:** PostgreSQL with `pgvector` (Neon, Supabase, Aiven, etc.)
+* **Frontend:** Static hosting (Vercel)
+* **Backend:** Node service (Render)
+* **Database:** PostgreSQL with `pgvector` (Neon)
 
 ### Example:
 
