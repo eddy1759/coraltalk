@@ -97,7 +97,7 @@ coraltalk/
 ### **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-org/coraltalk.git
+git clone https://github.com/eddy1759/coraltalk.git
 cd coraltalk
 ```
 
