@@ -286,27 +286,6 @@ confidence = 0.4*semantic + 0.3*consistency + 0.2*keyword_coverage + 0.1*suffici
 
 * `OPENAI_API_KEY` in server env only; never exposed to frontend.
 * CORS whitelisting using `CORS_ORIGIN` env var.
-* Rate limiting should be added to public endpoints.
-
-**Observability**
-
-* Log vector store stats, query latencies, top score distributions.
-* Track embedding drift over time (periodic re-embedding).
-* Add structured logging and Sentry for error capture.
-
-**Costs**
-
-* OpenAI token & embedding costs — cap `LLM_MAX_TOKENS` to bound costs.
-* Streaming reduces perceived latency but not cost; be mindful of repeated re-requests for the same query.
-
----
-
-## Testing & evaluation strategy
-
-* Unit-test strategies and prompt generation.
-* Integration tests for ingestion → vector insert → search → LLM stream (mock OpenAI).
-* Benchmark retrieval quality using a held-out query set to calibrate thresholds.
-* Run manual QA on `pnpm run ingest` + `pnpm run start:dev` to ensure end-to-end behavior.
 
 ---
 
