@@ -3,10 +3,10 @@ import { VectorStoreService } from '../retrieval/vector-store.service';
 import { StrictKBStrategy } from './strategies/strict-kb.strategy';
 import { HybridStrategy } from './strategies/hybrid.strategy';
 import { ChatQueryDto } from './dto/chat-query.dto';
-import { Observable, from, of } from 'rxjs'; // <-- Import 'from' and 'of'
-import { switchMap, catchError } from 'rxjs/operators'; // <-- Import operators
+import { Observable, from, of } from 'rxjs';
+import { switchMap, catchError } from 'rxjs/operators';
 import { SSEEvent } from '../common/types/sse.types';
-import { RetrievalResult } from '../common/types/sse.types'; // <-- Make sure this is imported
+import { RetrievalResult } from '../common/types/sse.types';
 
 @Injectable()
 export class ChatService {
