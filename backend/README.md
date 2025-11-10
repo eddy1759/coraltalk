@@ -278,7 +278,7 @@ See: [DATABASE_DESIGN.md](./docs/DATABASE_DESIGN.md)
 | `OPENAI_API_KEY`                 | OpenAI API key               | `sk-xxxx`                             |
 | `OPENAI_MODEL`                   | Model for responses          | `gpt-4o-mini`                         |
 | `OPENAI_EMBEDDING_MODEL`         | Embedding model              | `text-embedding-3-small`              |
-| `LLM_TEMPERATURE`                | Model creativity level       | `0.7`                                 |
+| `LLM_TEMPERATURE`                | Model creativity level       | `0.5`                                 |
 | `LLM_MAX_TOKENS`                 | Max tokens per response      | `500`                                 |
 | `STREAMING_ENABLED`              | Enable SSE streaming         | `true`                                |
 | `RETRIEVAL_TOP_K`                | Top-k retrieved chunks       | `5`                                   |
