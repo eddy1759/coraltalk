@@ -178,7 +178,7 @@ flowchart TD
 
 ---
 
-## Confidence scoring & thresholds (interview-ready explanation)
+## Confidence scoring & thresholds
 
 This is central to the RAG behavior.
 
